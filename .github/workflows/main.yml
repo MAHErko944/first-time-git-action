@@ -30,4 +30,4 @@ jobs:
 
       # Step 4: Push the Docker image to Docker Hub
       - name: "Push Docker Image"
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/myimage
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/myimage
