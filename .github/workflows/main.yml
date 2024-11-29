@@ -13,7 +13,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
+      # Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
       # Print the current working directory
       - name: Print Working Directory
@@ -36,4 +38,3 @@ jobs:
         run: |
           echo "Hello, GitHub Actions!" > testfile.txt
           cat testfile.txt
-
