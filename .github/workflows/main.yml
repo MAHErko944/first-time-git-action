@@ -14,9 +14,26 @@ jobs:
 
     steps:
       # Checkout the repository
-      - name: 'Testing Repository Actions'
+      - name: Checkout Repository
+        uses: pwd
+      # Print the current working directory
+      - name: Print Working Directory
         run: pwd
 
-      # Another test step
-      - name: 'Testing GitHub Actions'
-        run: echo My GitHub Actions
+      # List files in the repository
+      - name: List Repository Files
+        run: ls -la
+
+      # Print a custom message
+      - name: Print GitHub Actions Test Message
+        run: echo "This is a test action for GitHub Actions"
+
+      # Display the current date and time
+      - name: Show Current Date and Time
+        run: date
+
+      # Create a sample file and display its contents
+      - name: Create and Display File
+        run: |
+          echo "Hello, GitHub Actions!" > testfile.txt
+          cat testfile.txt
